@@ -4,5 +4,24 @@
   "main": "index.js",
   "repository": "https://github.com/matheus-calixto-silva/teste-desenvolvedor-frontend.git",
   "author": "Matheus Calixto <matheuscalixto8@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "prepare": "husky install",
+    "commit": "git-cz"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.2.2",
+    "@commitlint/config-conventional": "^19.2.2",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "lint-staged": "^15.2.2"
+  },
+  "dependencies": {
+    "husky": "6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
