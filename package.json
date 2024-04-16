@@ -1,0 +1,8 @@
+{
+  "name": "teste-desenvolvedor-frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/matheus-calixto-silva/teste-desenvolvedor-frontend.git",
+  "author": "Matheus Calixto <matheuscalixto8@gmail.com>",
+  "license": "MIT"
+}
