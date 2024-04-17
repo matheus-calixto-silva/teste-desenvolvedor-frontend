@@ -42,17 +42,23 @@ function MedicineList() {
     setModalOpen(false);
   };
 
+  const clearInput = () => {
+    setSearchTerm('');
+  };
+
   return (
     <div id="datalistContainer">
-      <div id="myDIV" className="header">
+      <div className="header">
         <h2>Bulário Eletrônico</h2>
-        <input
-          type="text"
-          id="myInput"
-          placeholder="Buscar medicamento"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
+        <div className="input-wrapper">
+          <input
+            type="text"
+            placeholder="Buscar medicamento"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <span className="clear-icon" onClick={() => clearInput()}>&times;</span>
+        </div>
       </div>
       <ul>
         {data

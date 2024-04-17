@@ -1,3 +1,7 @@
+.header h2 {
+  font-size: 3.2rem;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -40,13 +44,27 @@ ul li:hover {
   clear: both;
 }
 
-input {
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input {
   margin: 0;
   border: none;
   border-radius: 0;
   width: 75%;
   padding: 1rem;
   font-size: 1.6rem;
+}
+
+.input-wrapper .clear-icon {
+  position: absolute;
+  top: 45%;
+  right: 13%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #f44336;
+  font-size: 3.8rem;
 }
 
 .buttons {
