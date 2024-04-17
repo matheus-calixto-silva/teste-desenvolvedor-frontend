@@ -1,10 +1,7 @@
-import './App.css';
 import MedicineList from './components/MedicineList/index';
 
 function App() {
-  return (
-    <MedicineList />
-  );
+  return <MedicineList />;
 }
 
 export default App;
