@@ -82,3 +82,11 @@ input {
   width: 1080px;
   max-width: 1080px;
 }
+
+@media (max-width: 720px) {
+  #datalistContainer {
+    min-width: 400px;
+    width: 80%;
+    max-width: 80%;
+  }
+}
