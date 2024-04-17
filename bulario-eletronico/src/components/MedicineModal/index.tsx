@@ -33,31 +33,38 @@ function MedicineModal({ isOpen, onClose, medicine }: IMedicineModal) {
           &times;
         </span>
         <h1>{medicine.name}</h1>
-        <p>
-          {medicine.company}
-        </p>
-        <p>
+        <p className="medicine-company">{medicine.company}</p>
+        <p className="medicine-publicated-at">
           Publicado em:
+          {' '}
           {formatDate(medicine.published_at)}
         </p>
-        <ul>
+        <div className="medicine-documents">
           <h2>Documentos:</h2>
-          {medicine.documents.map((document: IDocument) => (
-            <li key={document.id}>
-              <a href={document.url} target="_blank" rel="noopener noreferrer">
-                {document.expedient}
-              </a>
-            </li>
-          ))}
-        </ul>
-        <h2>Principios ativos:</h2>
-        <ul>
-          {medicine.active_principles.map(
-            (activePrinciple: IActivePrinciple) => (
-              <li key={activePrinciple.id}>{activePrinciple.name}</li>
-            ),
-          )}
-        </ul>
+          <ul>
+            {medicine.documents.map((document: IDocument) => (
+              <li key={document.id}>
+                <a
+                  href={document.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {document.expedient}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="medicine-active-principles">
+          <h2>Principios ativos:</h2>
+          <ul>
+            {medicine.active_principles.map(
+              (activePrinciple: IActivePrinciple) => (
+                <li key={activePrinciple.id}>{activePrinciple.name}</li>
+              ),
+            )}
+          </ul>
+        </div>
       </div>
     </div>
   );
