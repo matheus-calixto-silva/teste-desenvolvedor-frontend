@@ -96,15 +96,13 @@ ul li:hover {
 }
 
 #datalistContainer {
-  min-width: 60rem;
   width: 108rem;
   max-width: 108rem;
 }
 
 @media (max-width: 72rem) {
   #datalistContainer {
-    min-width: 35rem;
-    width: 80%;
-    max-width: 80%;
+    width: 100%;
+    max-width: 100%;
   }
 }
