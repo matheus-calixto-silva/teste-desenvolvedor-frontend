@@ -14,8 +14,8 @@
   padding: 2rem;
   border-radius: 0.8rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
-  max-width: 80%;
-  width: 80%;
+  max-width: 40%;
+  width: 40%;
   position: relative;
 }
 
@@ -57,6 +57,11 @@
 }
 
 @media (max-width: 72rem) {
+  .modal-content {
+    max-width: 90%;
+    width: 90%;
+  }
+
   .modal-content h1 {
     font-size: 3.2rem;
   }
