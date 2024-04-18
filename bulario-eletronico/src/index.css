@@ -32,12 +32,6 @@ body {
   min-height: 100vh;
 }
 
-@media only screen and (max-width: 72rem) {
-  #root {
-    padding: 0.8rem;
-  }
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
