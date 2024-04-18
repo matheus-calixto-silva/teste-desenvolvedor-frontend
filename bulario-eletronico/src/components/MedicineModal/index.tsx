@@ -6,7 +6,7 @@ import {
   IDocument,
   IMedicine,
 } from '../../interfaces/IDataResponse';
-import './styles.css';
+import './styles.scss';
 
 interface IMedicineModal {
   isOpen: boolean;

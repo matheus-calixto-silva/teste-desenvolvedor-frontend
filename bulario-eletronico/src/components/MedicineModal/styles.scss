@@ -1,0 +1,80 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modal-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    max-width: 40%;
+    width: 40%;
+    position: relative;
+
+    h1 {
+      font-size: 4.2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .medicine-company {
+      font-size: 2.8rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .medicine-publicated-at {
+      font-size: 1.8rem;
+    }
+
+    .medicine-documents {
+      margin: 3.2rem 0;
+
+      h2 {
+        font-size: 2.2rem;
+        text-align: left;
+      }
+    }
+
+    .medicine-active-principles {
+      h2 {
+        font-size: 2.2rem;
+        text-align: left;
+      }
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2.4rem;
+    cursor: pointer;
+    color: #333;
+  }
+
+  @media (max-width: 72rem) {
+    .modal-content {
+      max-width: 90%;
+      width: 90%;
+
+      h1 {
+        font-size: 3.2rem;
+      }
+
+      .medicine-company {
+        font-size: 2.2rem;
+      }
+
+      .medicine-documents h2,
+      .medicine-active-principles h2 {
+        font-size: 2.2rem;
+        text-align: left;
+      }
+    }
+  }
+}

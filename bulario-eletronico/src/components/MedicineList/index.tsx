@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 import { IDataResponse, IMedicine } from '../../interfaces/IDataResponse';
 import MedicineModal from '../MedicineModal';
-import './styles.css';
+import './styles.scss';
 
 function MedicineList() {
   const [data, setData] = useState<IMedicine[]>([]);
