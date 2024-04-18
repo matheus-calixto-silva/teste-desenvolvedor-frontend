@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-import { IDataResponse, IMedicine } from '../../interfaces/IDataResponse';
+import { IMedicine } from '../../interfaces/IDataResponse';
+import medicineServices from '../../services/medicineServices';
 import MedicineModal from '../MedicineModal';
 import './styles.scss';
 
@@ -17,10 +17,8 @@ function MedicineList() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get<IDataResponse>(
-          `http://localhost:3000/data?_page=${currentPage}`,
-        );
-        setData(response.data.data);
+        const response = await medicineServices.getMedicinesByPage(currentPage);
+        setData(response.data);
       } catch (error) {
         // eslint-disable-next-line no-console
         console.error('Error fetching data:', error);
@@ -57,7 +55,9 @@ function MedicineList() {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <span className="clear-icon" onClick={() => clearInput()}>&times;</span>
+          <span className="clear-icon" onClick={() => clearInput()}>
+            &times;
+          </span>
         </div>
       </div>
       <ul>
